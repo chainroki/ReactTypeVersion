@@ -1,0 +1,16 @@
+version: 2
+jobs:
+    test_frontend:
+        docker:
+            - image: circleci/node
+        steps:
+            - checkout
+            - run: |
+                cd project
+                npm install
+                npm test
+workflows:
+    version: 2
+    run_test:
+        jobs:
+            - test_frontend
