@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile # docker-compose build で Dockerfile を使ってビルドする。
-    command: sh -c "yarn start" # docker-compose up でサーバーを立ち上げる。
+    command: sh -c "npm start" # docker-compose up でサーバーを立ち上げる。
     ports:
      - "3000:3000"
     tty: true
